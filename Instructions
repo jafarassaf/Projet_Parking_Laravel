@@ -1,0 +1,38 @@
+Instructions pour l'application de gestion de places de parking sous Laravel/Breeze
+
+STATUT : PROJET TERMINÉ ✅
+
+Fonctionnalités implémentées :
+- Installation de Laravel et Laravel Breeze
+- Structure de la base de données complète avec migrations
+- Modèles Eloquent configurés avec leurs relations
+- Contrôleurs pour toutes les fonctionnalités :
+  * ParkingSpaceController : Gestion des places de parking
+  * ParkingReservationController : Gestion des réservations
+  * ParkingWaitingListController : Gestion de la liste d'attente
+  * AdminController : Fonctionnalités d'administration
+  * UserController : Gestion des utilisateurs
+- Middleware d'administration pour sécuriser l'accès
+- Routes configurées pour toutes les fonctionnalités
+- Vues complètes :
+  * Tableau de bord utilisateur
+  * Liste des places de parking
+  * Détails d'une place
+  * Formulaire de demande de réservation
+  * Page de suivi des réservations
+  * Tableau de bord administrateur
+  * Formulaires d'ajout et de modification de places
+  * Vues de gestion des utilisateurs
+  * Vue de gestion de la liste d'attente
+- Seeders pour générer des données de test
+- Documentation complète (README.md)
+
+Instructions de déploiement :
+1. Configurer l'environnement (fichier .env)
+2. Exécuter les migrations : php artisan migrate
+3. Remplir la base de données : php artisan db:seed
+4. Lancer l'application : php artisan serve
+
+Identifiants par défaut :
+- Administrateur : admin@example.com / password
+- Utilisateurs standard : jean@example.com, marie@example.com, etc. / password

@@ -26,6 +26,13 @@ Route::middleware('auth')->group(function () {
     // Routes pour les places de parking (affichage uniquement pour les utilisateurs normaux)
     Route::get('parking/spaces', [ParkingSpaceController::class, 'index'])->name('parking.spaces.index');
     Route::get('parking/spaces/{id}', [ParkingSpaceController::class, 'show'])->name('parking.spaces.show');
+
+    // Routes pour les réservations de parking
+    Route::get('parking/reservations', [ParkingReservationController::class, 'index'])->name('parking.reservations.index');
+    Route::get('parking/reservations/create', [ParkingReservationController::class, 'create'])->name('parking.reservations.create');
+    Route::post('parking/reservations', [ParkingReservationController::class, 'store'])->name('parking.reservations.store');
+    Route::get('parking/reservations/{id}', [ParkingReservationController::class, 'show'])->name('parking.reservations.show');
+    Route::post('parking/reservations/{id}/cancel', [ParkingReservationController::class, 'cancel'])->name('parking.reservations.cancel');
     
     
     // Routes pour la liste d'attente (pour les utilisateurs normaux)
